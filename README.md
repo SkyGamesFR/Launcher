@@ -1,32 +1,20 @@
-<p align="center"><img src="https://i.imgur.com/Tp7AJyT.png"></p>
+<p align="center"><img src="/launcher/renderer/public/images/icon.png" width="150px" height="150px" alt="SkyGames Launcher"></p>
 
-## Usage
+<h1 align="center">SkyGames Launcher</h1>
+<h2 align="center">WIP : Not actually working as intended</h2>
 
-### Create an App
+<em><h5 align="center">A powerfull minecraft launcher for SkyGames</h5></em>
 
-```
-# with git
-$ git clone https://github.com/jekigates/nextron-with-shadcn-ui
-```
+**System Requirements**
 
-### Install Dependencies
+* [Windows][windows]
+* [Linux][linux]
+* [Macos][macos]
 
-```
-$ cd nextron-with-shadcn-ui
+---
 
-# using yarn or npm
-$ yarn (or `npm install`)
+### Feature
+* Launch custom instance
+* Auth with Azuriom
 
-# using pnpm
-$ pnpm install --shamefully-hoist
-```
-
-### Use it
-
-```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
-
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
-```
+<em><p align="center"><strong>Author: FullGreen.GN</strong></p></em>
