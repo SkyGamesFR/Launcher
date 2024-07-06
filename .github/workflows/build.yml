@@ -28,6 +28,10 @@ jobs:
           python-version: 3.x
 
       - name: Install Dependencies
+        run: npm install
+        shell: bash    
+
+      - name: Clean Install Dependencies
         run: npm ci
         shell: bash
 
