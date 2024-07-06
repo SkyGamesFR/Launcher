@@ -45,12 +45,6 @@ linux:
   description: 'SkyGames Launcher'
   category: 'Game'
 
-files:
-  - from: .
-    filter:
-      - package.json
-      - app
-
 directories:
   output: dist
   buildResources: resources
