@@ -1,4 +1,4 @@
-<p align="center"><img src="/launcher/renderer/public/images/icon.png" width="150px" height="150px" alt="SkyGames Launcher"></p>
+<p align="center"><img src="/renderer/public/images/icon.png" width="150px" height="150px" alt="SkyGames Launcher"></p>
 
 <h1 align="center">SkyGames Launcher</h1>
 <h2 align="center">WIP : Not actually working as intended</h2>
