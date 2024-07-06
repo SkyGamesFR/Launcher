@@ -24,8 +24,6 @@ publish:
     - Fixed some bugs
     - Improved performance
   publishAutoUpdate: true
-  publish: always
   releaseName: v${version}
   releaseNotesFile: CHANGELOG.md
-  publish: always
   updateInfo:
