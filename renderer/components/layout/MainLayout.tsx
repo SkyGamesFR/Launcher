@@ -14,7 +14,9 @@ export function MainLayout({children}: MainLayoutProps) {
             </Head>
             <main className="font-sans w-screen h-screen text-white flex bg-[linear-gradient(to_top,rgba(0,0,0,0.85),rgba(0,0,0,0.65),rgba(0,0,0,0.4)),url('/images/1.jpeg')] overflow-hidden bg-no-repeat bg-clip-border bg-cover">
                 <SideNav />
-                {children}
+                <div className="flex flex-col w-full h-full overflow-y-auto">
+                    {children}
+                </div>
             </main>
         </React.Fragment>
     )
