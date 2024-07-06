@@ -1,29 +1,56 @@
-appId: fr.skygames.launcher
-productName: SkyGames Launcher
-copyright: Copyright © 2024 SkyGames
-directories:
-  output: dist
-  buildResources: resources
+appId: 'fr.skygames.launcher'
+productName: 'SkyGames Launcher'
+artifactName: '${productName}-setup-${version}.${ext}'
+
+copyright: 'Copyright © 2024 SkyGames'
+
+asar: true
+compression: 'maximum'
+
+files:
+  - '!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.nvmrc,.eslintrc.json}'
+
+extraResources:
+  - 'libraries'
+
+# Windows Configuration
+win: 
+  target: 
+    - target: 'nsis'
+      arch: 'x64'
+
+# Windows Installer Configuration
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+
+# macOS Configuration
+mac:
+  target:
+    - target: 'dmg'
+      arch:
+        - 'x64'
+        - 'arm64'
+  artifactName: '${productName}-setup-${version}-${arch}.${ext}'
+  category: 'public.app-category.games'
+
+# Linux Configuration
+linux: 
+  target: 'AppImage'
+  maintainer: 'SkyGames'
+  vendor: 'SkyGames'
+  synopsis: 'SkyGames Launcher'
+  description: 'SkyGames Launcher'
+  category: 'Game'
+
 files:
   - from: .
     filter:
       - package.json
       - app
-publish: 
-  provider: github
-  token: ${{ secrets.GITHUB_TOKEN }}
-  releaseType: draft
-  draft: true
-  prerelease: true
-  repository: SkyGamesFR/launcher
-  owner: SkyGamesFR
-  vPrefixedTagName: false
-  releaseNotes: |
-    **Changelog:**
-    - Added new features
-    - Fixed some bugs
-    - Improved performance
-  publishAutoUpdate: true
-  releaseName: v${version}
-  releaseNotesFile: CHANGELOG.md
-  updateInfo:
+
+directories:
+  output: dist
+  buildResources: resources
