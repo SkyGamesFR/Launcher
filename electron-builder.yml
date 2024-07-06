@@ -1,6 +1,6 @@
-appId: com.example.nextron
-productName: My Nextron App
-copyright: Copyright © 2018 Yoshihide Shiono
+appId: fr.skygames.launcher
+productName: SkyGames Launcher
+copyright: Copyright © 2024 SkyGames
 directories:
   output: dist
   buildResources: resources
@@ -9,4 +9,23 @@ files:
     filter:
       - package.json
       - app
-publish: null
+publish: 
+  provider: github
+  token: ${{ secrets.GITHUB_TOKEN }}
+  releaseType: draft
+  draft: true
+  prerelease: true
+  repository: SkyGamesFR/launcher
+  owner: SkyGamesFR
+  vPrefixedTagName: false
+  releaseNotes: |
+    **Changelog:**
+    - Added new features
+    - Fixed some bugs
+    - Improved performance
+  publishAutoUpdate: true
+  publish: always
+  releaseName: v${version}
+  releaseNotesFile: CHANGELOG.md
+  publish: always
+  updateInfo:
